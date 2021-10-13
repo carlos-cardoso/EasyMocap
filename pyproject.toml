@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "easymocap"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "3.6.14"
+torch = "1.4.0"
+torchvision = "0.5.0"
+opencv-python = "^4.5.2.54"
+pyrender = "^0.1.45"
+chumpy = "^0.70"
+joblib = "^1.0.1"
+tqdm = "^4.62.3"
+yacs = "^0.1.8"
+tabulate = "^0.8.9"
+open3d = "^0.9.0.0"
+scikit-learn = "^0.24.2"
+scipy = "^1.5.4"
+Flask = "^2.0.2"
+
+[tool.poetry.dev-dependencies]
+ipdb = "^0.13.9"
+pudb = "^2021.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

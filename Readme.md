@@ -6,6 +6,44 @@
  * @FilePath: /EasyMocapRelease/Readme.md
 -->
 
+# Visualize SMPL DoFs with EasyMocap
+
+Install models in data/ as described in [doc/install](./doc/installation.md).
+You can install python dependencies using [poetry](https://python-poetry.org/) (Requires python 3.6).
+
+```bash
+poetry env use /usr/bin/python3.6
+```
+
+```bash
+poetry install
+poetry build
+```
+
+In one terminal run the EasyMocap visualization server.
+
+[//]: # (python apps/vis/vis_server.py --cfg config/vis3d/o3d_scene_smpl.yml write True out vis/output/mesh-smpl camera.cz 3. camera.cy 0.5)
+
+```bash
+poetry shell
+python apps/vis/vis_server.py --cfg config/vis3d/o3d_scene_smpl.yml camera.cz 3. camera.cy 0.5
+```
+
+In another terminal Run the web app
+
+```bash
+poetry shell
+python smpl_sliders.py
+```
+
+Navigate using a web browser to [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+
+<div align="center">
+    <img src="smpl_space.gif" width="80%">
+    <br>
+    <sup>Manipulating parameters of smpl.<sup/>
+</div>
+
 # EasyMocap
 
 <div align="left">
